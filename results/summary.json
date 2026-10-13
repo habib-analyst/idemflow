@@ -1,0 +1,120 @@
+{
+  "n_train": 240,
+  "n_test": 300,
+  "train_seed": 0,
+  "test_seed": 1,
+  "naive": {
+    "per_class": {
+      "transient": {
+        "precision": 0.7967479674796748,
+        "recall": 0.8099173553719008,
+        "f1": 0.8032786885245901,
+        "support": 121
+      },
+      "poison": {
+        "precision": 0.8402777777777778,
+        "recall": 1.0,
+        "f1": 0.9132075471698113,
+        "support": 121
+      },
+      "infra": {
+        "precision": 1.0,
+        "recall": 0.5689655172413793,
+        "f1": 0.7252747252747253,
+        "support": 58
+      }
+    },
+    "macro_f1": 0.8139203203230423,
+    "wasted_retries": 537
+  },
+  "signature": {
+    "per_class": {
+      "transient": {
+        "precision": 1.0,
+        "recall": 0.9917355371900827,
+        "f1": 0.995850622406639,
+        "support": 121
+      },
+      "poison": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 121
+      },
+      "infra": {
+        "precision": 0.9830508474576272,
+        "recall": 1.0,
+        "f1": 0.9914529914529915,
+        "support": 58
+      }
+    },
+    "macro_f1": 0.9957678712865435,
+    "wasted_retries": 0,
+    "wasted_retries_avoided": 537,
+    "feature_importance": [
+      [
+        "frac_transient_errors",
+        0.19440246376092657
+      ],
+      [
+        "frac_infra_errors",
+        0.17321121496765046
+      ],
+      [
+        "frac_poison_errors",
+        0.1700045516188472
+      ],
+      [
+        "mean_latency_s",
+        0.16689932948593103
+      ],
+      [
+        "fleet_step_failure_rate",
+        0.13058118495575685
+      ],
+      [
+        "fast_fail",
+        0.07336940809824989
+      ],
+      [
+        "same_error_every_time",
+        0.02515226915657994
+      ],
+      [
+        "latency_cv",
+        0.02311066894051782
+      ],
+      [
+        "n_distinct_error_types",
+        0.020379812694732675
+      ],
+      [
+        "payload_size_log10",
+        0.009508115427335323
+      ],
+      [
+        "same_step_every_time",
+        0.005104299834212466
+      ],
+      [
+        "n_distinct_steps",
+        0.004002037704650217
+      ],
+      [
+        "n_attempts",
+        0.0025361793583448707
+      ],
+      [
+        "schema_invalid",
+        0.0017384639962646214
+      ]
+    ]
+  },
+  "kill_gate": {
+    "macro_f1_delta": 0.18184755096350125,
+    "delta_bar": 0.15,
+    "poison_precision": 1.0,
+    "poison_precision_bar": 0.95,
+    "verdict": "PASS"
+  }
+}
